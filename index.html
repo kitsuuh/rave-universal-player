@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101014">
+  <title>Rave Universal Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>RAVE <span>UNIVERSAL</span></h1>
+      <p>Seu player para assistir junto.</p>
+    </header>
+
+    <section class="input-area">
+      <label for="videoUrl">Cole o link do filme ou vídeo</label>
+      <input id="videoUrl" type="url"
+        placeholder="https://exemplo.com/video.mp4">
+
+      <button id="playButton">REPRODUZIR</button>
+      <p id="status">MP4, M3U8 ou páginas incorporáveis</p>
+    </section>
+
+    <section class="player-area">
+      <video id="player" controls playsinline></video>
+      <iframe id="webFrame"
+        title="Página de vídeo"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        referrerpolicy="no-referrer"
+        hidden></iframe>
+    </section>
+
+    <section class="actions">
+      <button id="shareButton">COPIAR LINK COMPARTILHÁVEL</button>
+      <button id="openPageButton">ABRIR PÁGINA</button>
+    </section>
+
+    <footer>
+      <p>Rave Universal Player · 2026</p>
+      <p>Use somente conteúdos que você tem autorização para acessar.</p>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
